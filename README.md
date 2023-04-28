@@ -22,3 +22,5 @@ Here are some complex emojis which use ZWJ (like family emojis or skin tones): ð
 ```
 
 It is possible to modify the script to include or exclude more characters, the current filter is rather permissive.
+
+I would recommend to optimize the code for the type of text you process. Add to the `non_latin_regex` regular expression all the frequently used characters in your dataset. The default set is acceptable, but may not include all the forms of punctuation which your text might use, triggering the replacement code more often than necessary (this is just a performance issue if you have a large dataset to process).
